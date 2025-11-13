@@ -1,9 +1,5 @@
 # 🔒 Sistem Otentikasi dengan Java Swing & JPA
 
-![GitHub top language](https://img.shields.io/github/languages/top/H-Asrarillah/NamaRepoAnda?style=flat-square)
-![GitHub last commit](https://img.shields.io/github/last-commit/H-Asrarillah/NamaRepoAnda?style=flat-square)
-![Java Version](https://img.shields.io/badge/Java-21+-blue?style=flat-square)
-
 Proyek ini adalah hasil **Laporan Praktikum Mata Kuliah Pemrograman Berorientasi Objek (PBO)** yang berfokus pada implementasi sistem otentikasi lengkap (Login, Register, Forgot Password) menggunakan antarmuka grafis **Java Swing** dan memanfaatkan **Java Persistence API (JPA)** untuk interaksi dengan database **PostgreSQL**.
 
 ---
