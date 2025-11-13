@@ -58,28 +58,58 @@ Otentikasi pengguna adalah komponen krusial dalam setiap aplikasi untuk memverif
 ### A. Kelas Entity (`Login.java`)
 Memetakan kolom `username` (sebagai ID) dan `password_hash` dari tabel `login`.
 
+<img width="756" height="223" alt="image" src="https://github.com/user-attachments/assets/f4e41875-c239-4710-9a07-20b2df54ef13" />
+
+
 ### B. Form Login (`Masuk.java`)
+
+<img width="640" height="681" alt="image" src="https://github.com/user-attachments/assets/61870c64-0eb2-4792-a21d-806be1eb634e" />
+
 * Mengambil input dari `tfuser` dan `tfpass`.
 * Melakukan validasi input kosong.
 * Mencari entitas `Login` berdasarkan `username` (`em.find(...)`).
 * Membandingkan password input dengan `passwordHash` yang tersimpan.
+
+<img width="617" height="290" alt="image" src="https://github.com/user-attachments/assets/8c69fc53-4e68-49e5-9848-820c509517eb" />
+
 * Menyediakan navigasi ke **Register** (`regisMouseClicked`) dan **Forgot Password** (`fgpassMouseClicked`).
 
+<img width="480" height="235" alt="image" src="https://github.com/user-attachments/assets/f758a07d-254c-49a7-8ca7-3ec3a9221bbc" />
+
 ### C. Form Register (`Daftar.java`)
+
+<img width="400" height="449" alt="image" src="https://github.com/user-attachments/assets/599d917b-7b3a-43f9-a6b9-3f72866a92b9" />
+
 * Memeriksa keberadaan `username` yang sama di database.
 * Jika belum ada, membuat objek `Login` baru dan menyimpannya menggunakan `em.persist(newUser)`.
 
+<img width="684" height="521" alt="image" src="https://github.com/user-attachments/assets/d720c92e-f743-4fdd-a08d-957db9af6e8d" />
+
 ### D. Alur Forgot Password (`Password.java` dan `LupaPass.java`)
+
+<img width="366" height="258" alt="image" src="https://github.com/user-attachments/assets/35de0517-431a-42c6-8cda-39c22d037bae" />
+<img width="328" height="371" alt="image" src="https://github.com/user-attachments/assets/99368e7a-4307-415d-97b4-86a8ba2325e5" />
+
 1.  **Validasi Username (`Password.java`):** Meminta `username` dan mencari entitas (`em.find`). Jika ditemukan, navigasi ke form `LupaPass` dengan membawa `username`.
+
+<img width="777" height="526" alt="image" src="https://github.com/user-attachments/assets/615ab02c-522c-4469-b89c-76550faf8e8d" />
+
 2.  **Reset Password (`LupaPass.java`):**
     * Menerima `username`.
     * Meminta dua input password baru.
     * Melakukan validasi kecocokan password baru.
     * Jika valid, memperbarui `passwordHash` dan melakukan `em.getTransaction().commit()`.
 
+<img width="709" height="564" alt="image" src="https://github.com/user-attachments/assets/686594ee-cb2f-4ce1-af54-f4c33cf2478a" />
+
 ---
 
 ## 📝 Hasil dan Pembahasan
+
+### Koneksi Database
+Konfigurasi persistence.xml berhasil menghubungkan aplikasi Java dengan database PostgreSQL Toko_Komik.
+
+<img width="945" height="208" alt="image" src="https://github.com/user-attachments/assets/f69b7819-20d7-4d87-8bf3-c4e8bc4f2052" />
 
 ### Hasil Fungsi Login
 
